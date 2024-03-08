@@ -36,19 +36,19 @@ enum ServiceMode {
       };
 
   String present(TranslationsEn t) => switch (this) {
-        proxy => t.settings.config.serviceModes.proxy,
-        systemProxy => t.settings.config.serviceModes.systemProxy,
+        proxy => t.config.serviceModes.proxy,
+        systemProxy => t.config.serviceModes.systemProxy,
         tun =>
-          "${t.settings.config.serviceModes.tun}${isExperimental ? " (${t.settings.experimental})" : ""}",
+          "${t.config.serviceModes.tun}${isExperimental ? " (${t.settings.experimental})" : ""}",
         tunService =>
-          "${t.settings.config.serviceModes.tunService}${isExperimental ? " (${t.settings.experimental})" : ""}",
+          "${t.config.serviceModes.tunService}${isExperimental ? " (${t.settings.experimental})" : ""}",
       };
 
   String presentShort(TranslationsEn t) => switch (this) {
-        proxy => t.settings.config.shortServiceModes.proxy,
-        systemProxy => t.settings.config.shortServiceModes.systemProxy,
-        tun => t.settings.config.shortServiceModes.tun,
-        tunService => t.settings.config.shortServiceModes.tunService,
+        proxy => t.config.shortServiceModes.proxy,
+        systemProxy => t.config.shortServiceModes.systemProxy,
+        tun => t.config.shortServiceModes.tun,
+        tunService => t.config.shortServiceModes.tunService,
       };
 }
 
@@ -64,10 +64,10 @@ enum IPv6Mode {
   final String key;
 
   String present(TranslationsEn t) => switch (this) {
-        disable => t.settings.config.ipv6Modes.disable,
-        enable => t.settings.config.ipv6Modes.enable,
-        prefer => t.settings.config.ipv6Modes.prefer,
-        only => t.settings.config.ipv6Modes.only,
+        disable => t.config.ipv6Modes.disable,
+        enable => t.config.ipv6Modes.enable,
+        prefer => t.config.ipv6Modes.prefer,
+        only => t.config.ipv6Modes.only,
       };
 }
 
@@ -101,12 +101,17 @@ enum MuxProtocol {
   yamux;
 }
 
+@JsonEnum(valueField: 'key')
 enum WarpDetourMode {
-  outbound,
-  inbound;
+  proxyOverWarp("proxy_over_warp"),
+  warpOverProxy("warp_over_proxy");
+
+  const WarpDetourMode(this.key);
+
+  final String key;
 
   String present(TranslationsEn t) => switch (this) {
-        outbound => t.settings.config.warpDetourModes.outbound,
-        inbound => t.settings.config.warpDetourModes.inbound,
+        proxyOverWarp => t.config.warpDetourModes.proxyOverWarp,
+        warpOverProxy => t.config.warpDetourModes.warpOverProxy,
       };
 }
