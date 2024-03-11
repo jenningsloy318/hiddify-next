@@ -63,7 +63,7 @@ Future<void> lazyBootstrap(
   );
 
   final enableAnalytics =
-      await container.read(analyticsControllerProvider.future);
+      true || await container.read(analyticsControllerProvider.future);
   if (enableAnalytics) {
     await _init(
       "analytics",

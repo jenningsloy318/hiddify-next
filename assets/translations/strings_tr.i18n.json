@@ -36,13 +36,13 @@
     "overviewPageTitle": "Profiller",
     "detailsPageTitle": "Profil",
     "activeProfileNameSemanticLabel": "Aktif profil adı: \"${name}\".",
-    "activeProfileBtnSemanticLabel": "Tüm profilleri görüntüleyin.",
+    "activeProfileBtnSemanticLabel": "Tüm profilleri görüntüleyin",
     "nonActiveProfileBtnSemanticLabel": "Aktif profil olarak \"${name}\" seçeneğini seçin.",
     "subscription": {
       "traffic": "Trafik",
       "updatedTimeAgo": "${timeago} güncellendi",
       "remainingDuration": "${duration} Gün Kaldı",
-      "remainingTrafficSemanticLabel": "${consumed}/${total} trafik tüketildi.",
+      "remainingTrafficSemanticLabel": "${consumed}/${total} trafik tüketildi",
       "expired": "Süresi Doldu",
       "noTraffic": "Kotal Doldu"
     },
@@ -186,7 +186,7 @@
     },
     "geoAssets": {
       "pageTitle": "Varlıkları Yönlendirme",
-      "geoip": "Geoip",
+      "geoip": "GeoIP",
       "geosite": "Geosite",
       "version": "Sürüm ${version}",
       "fileMissing": "Eksik dosya",
@@ -347,13 +347,13 @@
     "muxMaxStreams": "Max Concurrent Streams",
     "enableWarp": "Enable WARP",
     "warpDetourMode": "Detour Mode",
-    "warpDetourModes": {
-      "inbound": "Detour WARP through proxies",
-      "outbound": "Detour proxies through WARP"
-    },
     "warpLicenseKey": "License Key",
     "warpCleanIp": "Clean IP",
     "warpPort": "Port",
-    "warpNoise": "Noise"
+    "warpNoise": "Noise",
+    "warpDetourModes": {
+      "inbound": "Detour WARP through proxies",
+      "outbound": "Detour proxies through WARP"
+    }
   }
 }

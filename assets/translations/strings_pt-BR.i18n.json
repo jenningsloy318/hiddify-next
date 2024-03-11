@@ -17,7 +17,7 @@
     "decline": "Recusar",
     "unknown": "Desconhecido",
     "hidden": "Escondido",
-    "timeout": "tempo esgotado"
+    "timeout": "Tempo Esgotado"
   },
   "intro": {
     "termsAndPolicyCaution(rich)": "ao continuar você concorda com ${tap( @:about.termsAndConditions)}",
@@ -35,19 +35,19 @@
     "downlink": "Link descendente",
     "connection": "Conexão",
     "speed": "Velocidade",
-    "totalTransferred": "Total transferido"
+    "totalTransferred": "Total Transferido"
   },
   "profile": {
     "overviewPageTitle": "Perfis",
     "detailsPageTitle": "Perfil",
     "activeProfileNameSemanticLabel": "Nome do perfil ativo: \"${name}\".",
-    "activeProfileBtnSemanticLabel": "Ver todos os perfis.",
+    "activeProfileBtnSemanticLabel": "Ver todos os perfis",
     "nonActiveProfileBtnSemanticLabel": "Selecione \"${name}\" como perfil ativo.",
     "subscription": {
       "traffic": "Tráfego",
       "updatedTimeAgo": "Atualizado ${timeago}",
       "remainingDuration": "${duration} dias restantes",
-      "remainingTrafficSemanticLabel": "${consumed} de ${total} tráfego consumido.",
+      "remainingTrafficSemanticLabel": "${consumed} de ${total} tráfego consumido",
       "expired": "Expirado",
       "noTraffic": "Fora da cota",
       "upload": "Upload",
@@ -65,7 +65,7 @@
       "fromClipboard": "Adicionar da área de transferência",
       "scanQr": "Digitalize o código QR",
       "qrScanner": {
-        "permissionDeniedError": "Permissão negada",
+        "permissionDeniedError": "Permissão Negada",
         "unexpectedError": "Algo deu errado",
         "torchSemanticLabel": "Luz do flash",
         "facingSemanticLabel": "Câmera voltada"
@@ -296,7 +296,7 @@
   },
   "play": {
     "title": "Hiddify (Pré-visualização)",
-    "short_description": "Auto, SSH, VLESS, Vmess, Trojan, Reality, Sing-Box, Clash, Xray, Shadowsocks"
+    "short_description": "Auto, SSH, VLESS, VMess, Trojan, Reality, Sing-Box, Clash, XRay, Shadowsocks"
   },
   "connection": {
     "tapToConnect": "Toque para conectar",
@@ -373,14 +373,14 @@
     "muxMaxStreams": "Máximo de fluxos simultâneos",
     "enableWarp": "Habilitar WARP",
     "warpDetourMode": "Modo de desvio",
-    "warpDetourModes": {
-      "inbound": "Desvie o WARP através de proxies",
-      "outbound": "Desviar proxies através do WARP"
-    },
     "warpLicenseKey": "Chave de licença",
     "warpCleanIp": "Limpar IP",
     "warpPort": "Porta",
     "warpNoise": "Contagem de ruído",
-    "warpNoiseDelay": "Atraso de ruído"
+    "warpNoiseDelay": "Atraso de ruído",
+    "warpDetourModes": {
+      "inbound": "Desvie o WARP através de proxies",
+      "outbound": "Desviar proxies através do WARP"
+    }
   }
 }

@@ -11,27 +11,27 @@
     },
     "sort": "Sort",
     "sortBy": "Sort by",
-    "addToClipboard": "Add to clipboard",
+    "addToClipboard": "Add To Clipboard",
     "notSet": "Not Set",
     "agree": "Agree",
     "decline": "Decline",
     "unknown": "Unknown",
     "hidden": "Hidden",
-    "timeout": "timeout",
-    "clipboardExportSuccessMsg": "Added to Clipboard",
+    "timeout": "Timeout",
+    "clipboardExportSuccessMsg": "Added To Clipboard",
     "showMore": "Show More",
     "showLess": "Show Less",
     "openAppSettings": "Open App Settings",
     "grantPermission": "Grant Permission"
   },
   "intro": {
-    "termsAndPolicyCaution(rich)": "by continuing you agree with ${tap(@:about.termsAndConditions)}",
+    "termsAndPolicyCaution(rich)": "By Continuing You Agree With ${tap(@:about.termsAndConditions)}",
     "start": "Start"
   },
   "home": {
     "pageTitle": "Home",
-    "emptyProfilesMsg": "Begin by adding a subscription profile",
-    "noActiveProfileMsg": "Choose a profile"
+    "emptyProfilesMsg": "Begin by Adding a Subscription Profile",
+    "noActiveProfileMsg": "Choose a Profile"
   },
   "stats": {
     "traffic": "Traffic",
@@ -41,19 +41,19 @@
     "downlink": "Downlink",
     "connection": "Connection",
     "speed": "Speed",
-    "totalTransferred": "Total transferred"
+    "totalTransferred": "Total Transferred"
   },
   "profile": {
     "overviewPageTitle": "Profiles",
     "detailsPageTitle": "Profile",
-    "activeProfileNameSemanticLabel": "Active profile name: \"${name}\".",
-    "activeProfileBtnSemanticLabel": "View all profiles.",
-    "nonActiveProfileBtnSemanticLabel": "Select \"${name}\" as active profile.",
+    "activeProfileNameSemanticLabel": "Active Profile Name: \"${name}\".",
+    "activeProfileBtnSemanticLabel": "View All Profiles",
+    "nonActiveProfileBtnSemanticLabel": "Select \"${name}\" as Active Profile",
     "subscription": {
       "traffic": "Traffic",
       "updatedTimeAgo": "Updated ${timeago}",
       "remainingDuration": "${duration} Days Remaining",
-      "remainingTrafficSemanticLabel": "${consumed} of ${total} traffic consumed.",
+      "remainingTrafficSemanticLabel": "${consumed} of ${total} Traffic Consumed",
       "expired": "Expired",
       "noTraffic": "Out of Quota",
       "upload": "Upload",
@@ -62,70 +62,70 @@
       "expireDate": "Expire Date"
     },
     "sortBy": {
-      "lastUpdate": "Recently updated",
+      "lastUpdate": "Recently Updated",
       "name": "Alphabetically"
     },
     "add": {
       "buttonText": "New Profile",
       "shortBtnTxt": "New Profile",
       "fromClipboard": "Add From Clipboard",
-      "scanQr": "Scan QR code",
+      "scanQr": "Scan QR Code",
       "qrScanner": {
-        "permissionDeniedError": "Permission denied",
-        "unexpectedError": "Something went wrong",
-        "torchSemanticLabel": "Flash light",
-        "facingSemanticLabel": "Camera facing"
+        "permissionDeniedError": "Permission Denied",
+        "unexpectedError": "Something Went Wrong",
+        "torchSemanticLabel": "Flash Light",
+        "facingSemanticLabel": "Camera Facing"
       },
       "manually": "Manual Entry",
       "addingProfileMsg": "Adding Profile",
-      "failureMsg": "Failed to add profile"
+      "failureMsg": "Failed to Add Profile"
     },
     "update": {
       "buttonTxt": "Update",
       "tooltip": "Update Profile",
       "updateSubscriptions": "Update Subscriptions",
-      "failureMsg": "Failed to update profile",
-      "successMsg": "Profile updated successfully",
-      "namedFailureMsg": "Failed to update \"${name}\"",
-      "namedSuccessMsg": "\"${name}\" updated successfully"
+      "failureMsg": "Failed to Update Profile",
+      "successMsg": "Profile Updated Successfully",
+      "namedFailureMsg": "Failed to Update \"${name}\"",
+      "namedSuccessMsg": "\"${name}\" Updated Successfully"
     },
     "share": {
       "buttonText": "Share",
-      "exportToClipboardSuccess": "Exported to clipboard",
-      "exportSubLinkToClipboard": "Export subscription link to clipboard",
-      "subLinkQrCode": "Subscription link QR code",
-      "exportConfigToClipboard": "Export configuration to clipboard",
-      "exportConfigToClipboardSuccess": "Configuration copied to clipboard"
+      "exportToClipboardSuccess": "Exported to Clipboard",
+      "exportSubLinkToClipboard": "Export Subscription Link to Clipboard",
+      "subLinkQrCode": "Subscription Link QR Code",
+      "exportConfigToClipboard": "Export Configuration to Clipboard",
+      "exportConfigToClipboardSuccess": "Configuration Copied to Clipboard"
     },
     "edit": {
       "buttonTxt": "Edit",
-      "selectActiveTxt": "Select active profile"
+      "selectActiveTxt": "Select Active Profile"
     },
     "delete": {
       "buttonTxt": "Delete",
-      "confirmationMsg": "Delete profile permanently?",
-      "successMsg": "Profile deleted successfully"
+      "confirmationMsg": "Delete Profile Permanently?",
+      "successMsg": "Profile Deleted Successfully"
     },
     "save": {
       "buttonText": "Save",
-      "successMsg": "Profile saved successfully",
-      "failureMsg": "Failed to save profile"
+      "successMsg": "Profile Saved Successfully",
+      "failureMsg": "Failed to Save Profile"
     },
     "detailsForm": {
       "nameLabel": "Name",
-      "nameHint": "Profile name",
+      "nameHint": "Profile Name",
       "urlLabel": "URL",
-      "urlHint": "Full config URL",
-      "emptyNameMsg": "Name is required",
+      "urlHint": "Full Config URL",
+      "emptyNameMsg": "Name Is Required",
       "invalidUrlMsg": "Invalid URL",
       "lastUpdate": "Last Update",
       "updateInterval": "Auto Update",
-      "updateIntervalDialogTitle": "Auto Update Interval (in hours)"
+      "updateIntervalDialogTitle": "Auto Update Interval (in Hours)"
     }
   },
   "proxies": {
     "pageTitle": "Proxies",
-    "emptyProxiesMsg": "No proxies available",
+    "emptyProxiesMsg": "No Proxies Available",
     "delayTestTooltip": "Test Delay",
     "sortTooltip": "Sort Proxies",
     "checkIp": "Check IP",
@@ -135,14 +135,14 @@
       "name": "Alphabetically",
       "delay": "By Delay"
     },
-    "activeProxySemanticLabel": "Active proxy",
+    "activeProxySemanticLabel": "Active Proxy",
     "delaySemantics": {
-      "result": "delay: ${delay}ms",
-      "timeout": "delay test timeout",
-      "testing": "delay: testing..."
+      "result": "Delay: ${delay}ms",
+      "timeout": "Delay Test Timeout",
+      "testing": "Delay: Testing..."
     },
     "ipInfoSemantics": {
-      "address": "IP address",
+      "address": "IP Address",
       "country": "Country"
     }
   },
@@ -151,7 +151,7 @@
     "filterHint": "Filter",
     "allLevelsFilter": "All",
     "shareCoreLogs": "Share Core Logs",
-    "shareAppLogs": "Share App logs",
+    "shareAppLogs": "Share App Logs",
     "pauseTooltip": "Pause",
     "resumeTooltip": "Resume",
     "clearTooltip": "Clear"
@@ -162,8 +162,8 @@
     "experimental": "Experimental",
     "experimentalMsg": "Features with Experimental flag are still in development and might cause issues.",
     "exportOptions": "Export Options to Clipboard",
-    "exportAllOptions": "Export Options to Clipboard (debug)",
-    "importOptions": "Import Options from Clipboard",
+    "exportAllOptions": "Export Options to Clipboard (Debug)",
+    "importOptions": "Import Options From Clipboard",
     "importOptionsMsg": "This will rewrite all config options with provided values. Are you sure?",
     "general": {
       "sectionTitle": "General",
@@ -179,10 +179,10 @@
       },
       "themeMode": "Theme Mode",
       "themeModes": {
-        "system": "Follow system theme",
-        "dark": "Dark mode",
-        "light": "Light mode",
-        "black": "Black mode"
+        "system": "Follow System Theme",
+        "dark": "Dark Mode",
+        "light": "Light Mode",
+        "black": "Black Mode"
       },
       "enableAnalytics": "Enable Analytics",
       "enableAnalyticsMsg": "Give permission to collect analytics and send crash reports to improve the app",
@@ -190,10 +190,10 @@
       "silentStart": "Start Minimized",
       "openWorkingDir": "Open Working Directory",
       "ignoreBatteryOptimizations": "Disable Battery Optimization",
-      "ignoreBatteryOptimizationsMsg": "Remove restrictions for optimal VPN performance",
-      "dynamicNotification": "Display speed in notification",
+      "ignoreBatteryOptimizationsMsg": "Remove Restrictions For Optimal VPN Performance",
+      "dynamicNotification": "Display Speed in Notification",
       "hapticFeedback": "Haptic Feedback",
-      "autoIpCheck": "Automatically check connection IP"
+      "autoIpCheck": "Automatically Check Connection IP"
     },
     "advanced": {
       "sectionTitle": "Advanced",
@@ -204,31 +204,31 @@
       "resetTunnel": "Reset VPN Profile"
     },
     "network": {
-      "perAppProxyPageTitle": "Per-app Proxy",
+      "perAppProxyPageTitle": "Per-App Proxy",
       "perAppProxyModes": {
         "off": "All",
-        "offMsg": "Proxy all apps",
+        "offMsg": "Proxy All Apps",
         "include": "Proxy",
-        "includeMsg": "Proxy only selected apps",
+        "includeMsg": "Proxy Only Selected Apps",
         "exclude": "Bypass",
-        "excludeMsg": "Do not proxy selected apps"
+        "excludeMsg": "Do Not Proxy Selected Apps"
       },
-      "showSystemApps": "Show system apps",
-      "hideSystemApps": "Hide system apps",
-      "clearSelection": "Clear selection"
+      "showSystemApps": "Show System Apps",
+      "hideSystemApps": "Hide System Apps",
+      "clearSelection": "Clear Selection"
     },
     "geoAssets": {
       "pageTitle": "Routing Assets",
-      "geoip": "Geoip",
-      "geosite": "Geosite",
+      "geoip": "GeoIP",
+      "geosite": "GeoSite",
       "version": "Version ${version}",
       "fileMissing": "File Missing",
       "update": "Update",
       "download": "Download",
-      "failureMsg": "Failed to update asset",
-      "successMsg": "Successfully updated asset",
+      "failureMsg": "Failed to Update Asset",
+      "successMsg": "Successfully Updated Asset",
       "addRecommended": "Add Recommended Assets",
-      "missingGeoAssetsMsg": "Selected routing assets' files are missing. Either download them or choose existing ones."
+      "missingGeoAssetsMsg": "Selected Routing Assets' files are missing. Either download them or choose existing ones"
     }
   },
   "about": {
@@ -236,12 +236,12 @@
     "version": "Version",
     "sourceCode": "Source Code",
     "telegramChannel": "Telegram Channel",
-    "checkForUpdate": "Check for update",
-    "privacyPolicy": "Privacy policy",
-    "termsAndConditions": "Terms and conditions"
+    "checkForUpdate": "Check For Update",
+    "privacyPolicy": "Privacy Policy",
+    "termsAndConditions": "Terms and Conditions"
   },
   "appUpdate": {
-    "notAvailableMsg": "Already using the latest version",
+    "notAvailableMsg": "Already Using The Latest Version",
     "dialogTitle": "Update Available",
     "updateMsg": "A new version of @:general.appTitle is available. Would you like to update now?",
     "currentVersionLbl": "Current Version",
@@ -269,15 +269,15 @@
     },
     "singbox": {
       "unexpected": "Unexpected Service Error",
-      "serviceNotRunning": "Service is not running",
+      "serviceNotRunning": "Service is Not Running",
       "missingPrivilege": "Missing Privilege",
-      "missingPrivilegeMsg": "VPN mode requires administrator privileges. Either relaunch the app as administrator or change service mode.",
+      "missingPrivilegeMsg": "VPN Mode Requires Administrator Privileges. Either relaunch the app as administrator or change service mode.",
       "missingGeoAssets": "Missing Geo Assets",
-      "missingGeoAssetsMsg": "Geo assets are missing. consider changing active asset or download selected one in the settings.",
-      "invalidConfigOptions": "Invalid configuration options",
+      "missingGeoAssetsMsg": "Geo Assets Are Missing. consider changing active asset or download selected one in the settings.",
+      "invalidConfigOptions": "Invalid Configuration Options",
       "invalidConfig": "Invalid Configuration",
-      "create": "Service creation error",
-      "start": "Service startup error"
+      "create": "Service Creation Error",
+      "start": "Service Startup Error"
     },
     "connectivity": {
       "unexpected": "Unexpected Failure",
@@ -292,11 +292,11 @@
       "invalidUrl": "Invalid URL"
     },
     "connection": {
-      "unexpected": "Unexpected connection error",
-      "timeout": "Connection timeout",
-      "badResponse": "Bad response",
-      "connectionError": "Connection error",
-      "badCertificate": "Bad certificate"
+      "unexpected": "Unexpected Connection Error",
+      "timeout": "Connection Timeout",
+      "badResponse": "Bad Response",
+      "connectionError": "Connection Error",
+      "badCertificate": "Bad Certificate"
     },
     "geoAssets": {
       "unexpected": "Unexpected Error",
@@ -306,11 +306,11 @@
   },
   "play": {
     "title": "Hiddify (Preview)",
-    "short_description": "Auto, SSH, VLESS, Vmess, Trojan, Reality, Sing-Box, Clash, Xray, Shadowsocks",
-    "full_description": "The key goal of Hiddify is to provide a secure, user-friendly and efficient tunneling client. It enables you to route all traffic or selected app traffic to a remote server of your choose, utilizing VPN-Service permission.\n\nNote: We do not provide any server; users are required to ensure their online activities stay private by using use their own self-hosted server or trusted servers. \n \nWe support servers with:\n- Normal V2ray/Xray Subscription Link\n- Clash Subscription Link\n- Sing-Box Subscription Link\n\nWhat is our unique features?\n - User Friendly\n - Optimized and Fast\n - Automatically select LowestPing \n - Show user usage information\n - Easily import sublink by one click using deeplinking \n - Free and No ADS\n - Easily switch user sublinks\n - more and more\n\nSupport:\n- All Protocols supported by Sing-Box \n- VLESS + xtls reality, vision\n- VMESS\n- Trojan\n- ShoadowSocks\n- Reality\n- V2ray\n- Hystria2\n- TUIC\n- SSH\n- ShadowTLS\n\n\nThe source code exist in https://github.com/hiddify/Hiddify-Next\nThe application core is based on open-source sing-box.\n\nPermission Description:\n- VPN Service: As the goal of this application is to provide a secure, user-friendly and efficient tunneling client, we need this permission to be able to route the traffic via tunnel to the remote server. \n- QUERY ALL PACKAGES: This permission is used to allow users to include or exclude specific applications for tunneling.\n- RECEIVE BOOT COMPLETED: This permission can be enabled or disabled from app settings to activate this application upon device boot.\n- POST NOTIFICATIONS: This permission is essential as we employ a foreground service to ensure the continuous operation of the VPN service.\n- This application is free from advertisements. The analytics and crash data only occurs with the explicit consent of the user in the first use of application."
+    "short_description": "Auto, SSH, VLESS, VMess, Trojan, Reality, Sing-Box, Clash, XRay, Shadowsocks",
+    "full_description": "The key goal of Hiddify is to provide a secure, user-friendly and efficient tunneling client. It enables you to route all traffic or selected app traffic to a remote server of your choose, utilizing VPN-Service permission.\n\nNote: We do not provide any server; users are required to ensure their online activities stay private by using use their own self-hosted server or trusted servers. \n \nWe Support Servers With:\n- Normal V2Ray/XRay Subscription Link\n- Clash Subscription Link\n- Sing-Box Subscription Link\n\nWhat is our unique features?\n - User Friendly\n - Optimized and Fast\n - Automatically select LowestPing \n - Show user usage information\n - Easily import sublink by one click using deeplinking \n - Free and No ADS\n - Easily switch user sublinks\n - More and more\n\nSupport:\n- All Protocols Supported by Sing-Box \n- VLESS + XTLS Reality, Vision\n- VMess\n- Trojan\n- ShoadowSocks\n- Reality\n- WireGuard\n- V2Ray\n- Hysteria2\n- TUICv5\n- SSH\n- ShadowTLS\n\n\nThe source code exist in https://github.com/hiddify/Hiddify-Next\nThe application core is based on open-source Sing-Box.\n\nPermission Description:\n- VPN Service: As the goal of this application is to provide a secure, user-friendly and efficient tunneling client, we need this permission to be able to route the traffic via tunnel to the remote server. \n- QUERY ALL PACKAGES: This permission is used to allow users to include or exclude specific applications for tunneling.\n- RECEIVE BOOT COMPLETED: This permission can be enabled or disabled from app settings to activate this application upon device boot.\n- POST NOTIFICATIONS: This permission is essential as we employ a foreground service to ensure the continuous operation of the VPN service.\n- This application is free from advertisements. The analytics and crash data only occurs with the explicit consent of the user in the first use of application."
   },
   "connection": {
-    "tapToConnect": "Tap to Connect",
+    "tapToConnect": "Tap To Connect",
     "connecting": "Connecting",
     "disconnecting": "Disconnecting",
     "connected": "Connected",
@@ -318,11 +318,11 @@
     "connectAnyWay": "Connect",
     "experimentalNotice": "Experimental Features In Use",
     "experimentalNoticeMsg": "You've enabled some experimental features which might affect connection quality and cause unexpected errors. You can always change or reset these options from Config options page.",
-    "disableExperimentalNotice": "Don't show again",
-    "reconnectMsg": "Reconnect for changes to take effect"
+    "disableExperimentalNotice": "Don't Show Again",
+    "reconnectMsg": "Reconnect for Changes to Take Effect"
   },
   "config": {
-    "resetBtn": "Reset options",
+    "resetBtn": "Reset Options",
     "serviceMode": "Service Mode",
     "quickSettings": "Quick Settings",
     "setupWarp": "Setup WARP",
@@ -343,7 +343,7 @@
       "route": "Route Options",
       "dns": "DNS Options",
       "inbound": "Inbound Options",
-      "mux": "Multiplexer",
+      "mux": "MultiPlexer",
       "outbound": "Outbound Options",
       "tlsTricks": "TLS Tricks",
       "warp": "WARP Options",
@@ -351,11 +351,11 @@
     },
     "warpConsent": {
       "title": "Cloudflare WARP Consent",
-      "description(rich)": "Cloudflare WARP is a free WireGuard VPN provider. By enabling this option you are agreeing to the Cloudflare WARP's ${tos(Terms of Service)} and ${privacy(Privacy Policy)}."
+      "description(rich)": "Cloudflare WARP is a Free WireGuard VPN Provider. By enabling this option you are agreeing to the Cloudflare WARP's ${tos(Terms of Service)} and ${privacy(Privacy Policy)}."
     },
-    "generateWarpConfig": "Generate WARP config",
-    "missingWarpConfig": "Missing WARP config",
-    "warpConfigGenerated": "WARP config generated",
+    "generateWarpConfig": "Generate WARP Config",
+    "missingWarpConfig": "Missing WARP Config",
+    "warpConfigGenerated": "WARP Config Generated",
     "pageTitle": "Config Options",
     "logLevel": "Log Level",
     "resolveDestination": "Resolve Destination",
@@ -397,8 +397,10 @@
     "enableWarp": "Enable WARP",
     "warpDetourMode": "Detour Mode",
     "warpDetourModes": {
-      "proxyOverWarp": "Detour proxies through WARP",
-      "warpOverProxy": "Detour WARP through proxies"
+      "proxyOverWarp": "Detour Proxies Through WARP",
+      "warpOverProxy": "Detour WARP Through Proxies",
+      "inbound": "Detour WARP Through Proxies",
+      "outbound": "Detour Proxies Through WARP"
     },
     "warpLicenseKey": "License Key",
     "warpCleanIp": "Clean IP",
