@@ -100,29 +100,11 @@ jobs:
       - name: Import Apple Mobile Provisioning Profile
         if: ${{ inputs.upload-artifact && startsWith(matrix.os,'macos') }}
         run: |
-          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
-          echo "${{secrets.APPLE_MOBILE_PROVISIONING_PROFILES_TARGZ_BASE64}}"|base64 --decode | tar xz -C ~/Library/MobileDevice/Provisioning\ Profiles
-          # echo "${{secrets.APPLE_DEVLOP_PROVISIONING_PROFILES_TARGZ_BASE64}}"|base64 --decode | tar xz -C ~/Library/MobileDevice/Provisioning\ Profiles
+           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+           echo "${{secrets.APPLE_MOBILE_PROVISIONING_PROFILES_TARGZ_BASE64}}"|base64 --decode | tar xz -C ~/Library/MobileDevice/Provisioning\ Profiles
+        #   # echo "${{secrets.APPLE_DEVLOP_PROVISIONING_PROFILES_TARGZ_BASE64}}"|base64 --decode | tar xz -C ~/Library/MobileDevice/Provisioning\ Profiles
           
 
-
-
-      # - name: Download Provisioning Profile
-      #   if: ${{ inputs.upload-artifact && startsWith(matrix.os,'macos') }}
-      #   uses: Apple-Actions/download-provisioning-profiles@v1
-      #   with:
-      #     bundle-id: app.hiddify.com
-      #     issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
-      #     api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
-      #     api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
-      # - name: Download Provisioning Profile  SingBoxPacketTunnel
-      #   if: ${{ inputs.upload-artifact && startsWith(matrix.os,'macos') }}
-      #   uses: Apple-Actions/download-provisioning-profiles@v1
-      #   with:
-      #     bundle-id: app.hiddify.com.SingBoxPacketTunnel
-      #     issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
-      #     api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
-      #     api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
 
       
       - name: Setup Flutter
@@ -171,6 +153,12 @@ jobs:
         if: ${{ startsWith(matrix.platform,'windows') }}
         run: |
           (Get-Content -Path "pubspec.yaml") -notmatch "permission_handler" | Set-Content -Path "pubspec.yaml"
+          (Get-Content -Path "lib\features\profile\add\add_profile_modal.dart") -notmatch "qr_code_scanner_screen" | Set-Content -Path "lib\features\profile\add\add_profile_modal.dart"
+          (Get-Content -Path lib\features\profile\add\add_profile_modal.dart) -replace 'await QRCodeScannerScreen\(\).open\(context\);', 'null;' | Set-Content -Path lib\features\profile\add\add_profile_modal.dart
+          Remove-Item -Path "lib\features\common\qr_code_scanner_screen.dart"
+
+
+
 
       - name: Prepare for ${{ matrix.platform }}
         run: |
@@ -266,20 +254,11 @@ jobs:
 
       - name: Upload Artifact
         if: env.UPLOAD_ARTIFACT == 'true'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
-          name: artifact
+          name: ${{matrix.platform}}
           path: ./out
-          retention-days: 2
-      - name: 'Upload app to TestFlight'
-        if: ${{ inputs.upload-artifact && matrix.platform == 'ios' && inputs.tag-name != 'draft' }}
-        uses: apple-actions/upload-testflight-build@v1
-        continue-on-error: true
-        with:           
-          app-path: 'out/Hiddify-iOS.ipa' 
-          issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
-          api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
-          api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+          retention-days: 1
 
       - name: Clean up keychain and provisioning profile
         if: ${{ always() && startsWith(matrix.os,'macos')}}
@@ -299,10 +278,12 @@ jobs:
           # this fetches all history so that we can read each commit
           fetch-depth: 0
       - name: Download Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          name: artifact
+          merge-multiple: true
+          pattern: "*"
           path: ./out/
+          
 
       - name: Display Files Structure
         run: ls -R
@@ -343,9 +324,11 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
 
-      - uses: actions/download-artifact@v3
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
         with:
-          name: artifact
+          merge-multiple: true
+          pattern: "*"
           path: ./out/
 
       - name: Display Files Structure
@@ -383,3 +366,42 @@ jobs:
           track: 'beta'
 
 
+  upload-to-testflight:
+    needs: [build]
+    # if: ${{ inputs.upload-artifact &&  inputs.tag-name != 'draft' }}
+    if: ${{ inputs.upload-artifact }}
+    runs-on: macOS-latest
+    timeout-minutes: 30
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          merge-multiple: true
+          pattern: "*ios*"
+          path: ./out/
+
+      - uses: Apple-Actions/import-codesign-certs@v2
+        with:
+          p12-file-base64: ${{ secrets.APPLE_UPLOAD_CERTIFICATE_P12 }}
+          p12-password: ${{ secrets.APPLE_CERTIFICATE_P12_PASSWORD }}
+
+      # - uses: Apple-Actions/download-provisioning-profiles@v1
+      #   with:
+      #     bundle-id: app.hiddify.com
+      #     issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
+      #     api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
+      #     api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
+
+
+
+      - name: Import Apple Mobile Provisioning Profile
+        run: |
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          echo "${{secrets.APPLE_DIST_PROVISIONING_PROFILES_TARGZ_BASE64}}"|base64 --decode | tar xz -C ~/Library/MobileDevice/Provisioning\ Profiles
+
+      - uses: Apple-Actions/upload-testflight-build@v1
+        with:
+          app-path: 'out/Hiddify-iOS.ipa' 
+          issuer-id: ${{ secrets.APPSTORE_ISSUER_ID }}
+          api-key-id: ${{ secrets.APPSTORE_API_KEY_ID }}
+          api-private-key: ${{ secrets.APPSTORE_API_PRIVATE_KEY }}
