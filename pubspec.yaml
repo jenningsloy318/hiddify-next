@@ -1,7 +1,7 @@
 name: hiddify
 description: Cross Platform Multi Protocol Proxy Frontend.
 publish_to: "none"
-version: 0.17.11+1711
+version: 0.17.12+1712
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
@@ -80,6 +80,8 @@ dependencies:
   # circle_flags: ^4.0.2
   circle_flags:
     git: https://github.com/hiddify-com/flutter_circle_flags.git
+  protobuf: ^3.1.0
+  grpc: ^3.2.4
 
 dev_dependencies:
   flutter_test:
